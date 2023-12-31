@@ -1,12 +1,25 @@
 function gold_couples = alGolbach(N)
+% alGolbach : function to compute and list every Goldbach couples
+% of prime numbers which sum equals the given -even- input.
 %
-% Author, copyright and support : nicolas.douillet@free.fr, 2023.
+% Author, copyright and support : nicolas (dot) douillet (at) free (dot) fr, 2023.
+%
+%
+% Input
+%
+% - N : positive even integer scalar.
+%
+%
+% Output
+%
+% gold_couples : positive integer matrix of prime numbers. The Goldbach couples.
+%                size(gold_couples) = [m, 2], with m the number of found couples.
 
 
 n = 2:N;
 P = n(isprime(n)); % primes less or equal to N
 
-assert(mod(N,2) == 0, 'N must be even integer.');
+assert(isreal(N) && mod(N,2) == 0 && floor(N) == N, 'N must be even integer.');
 
 
 T = 2*P;        % trivial cases
