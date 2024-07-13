@@ -2,7 +2,7 @@ function gold_couples = alGolbach(N)
 % alGolbach : function to compute and list every Goldbach couples
 % of prime numbers which sum equals the given -even- input.
 %
-% Author, copyright and support : nicolas (dot) douillet (at) free (dot) fr, 2023.
+% Author : nicolas.douillet9 (at) gmail.com, 2023-2024.
 %
 %
 % Input
