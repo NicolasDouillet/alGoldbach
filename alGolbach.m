@@ -1,8 +1,8 @@
 function gold_couples = alGolbach(N)
-% alGolbach : function to compute and list every Goldbach couples
+%% alGolbach : function to compute and list every Goldbach couples
 % of prime numbers which sum equals the given -even- input.
 %
-% Author : nicolas.douillet9 (at) gmail.com, 2023-2024.
+% Author : nicolas.douillet (at) free.fr, 2023-2025.
 %
 %
 % Input
@@ -16,11 +16,12 @@ function gold_couples = alGolbach(N)
 %                size(gold_couples) = [m, 2], with m the number of found couples.
 
 
-n = 2:N;
-P = n(isprime(n)); % primes less or equal to N
-
+%% Input parsing
 assert(isreal(N) && mod(N,2) == 0 && floor(N) == N, 'N must be even integer.');
 
+
+%% Body
+P = primes(N); % primes less or equal to N
 
 T = 2*P;        % trivial cases
 T = T(T < N+1); % the ones less or equal to N
